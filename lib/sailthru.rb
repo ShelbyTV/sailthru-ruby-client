@@ -3,7 +3,11 @@ require 'uri'
 require 'cgi'
 require 'rubygems'
 require 'json'
-require 'digest/md5'
+begin
+  require 'md5'
+rescue LoadError
+  require 'digest/md5'
+end
 
 module Sailthru
 
