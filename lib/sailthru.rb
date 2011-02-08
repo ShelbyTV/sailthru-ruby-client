@@ -57,7 +57,7 @@ module Sailthru
     #
     # Returns an MD5 hash of the signature string for an API call.
     def get_signature_hash(params, secret)
-       Digest::MD5.hexdigest(get_signature_string(params, secret)) # debuggin
+       Digest::MD5.hexdigest(get_signature_string(params, secret)).to_s # debuggin
     end
 
 
